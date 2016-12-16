@@ -34,5 +34,7 @@ namespace f1h2o5.Controllers
 
             return View();
         }
+
+        // PUT THE LINQ QUERY HERE for steve's reports.
     }
 }
