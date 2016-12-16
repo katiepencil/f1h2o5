@@ -1,0 +1,70 @@
+﻿@model IEnumerable<f1h2o5.Models.DriverRunsRace>
+
+@{
+    ViewBag.Title = "Race results";
+}
+
+<h2>Here are the race results...</h2>
+
+@if (@User.IsInRole("Admin"))
+{
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Driver.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Driver.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race.RaceYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race.RaceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RaceResultType.ResultTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RaceTime)
+        </th>
+         @*<th></th>*@
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Driver.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Driver.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race.RaceYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race.RaceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RaceResultType.ResultTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RaceTime)
+        </td>
+        @*<td>
+                <ul>
+                    <li></li>
+                    @if (@User.IsInRole("Admin"))
+                    {<li>@Html.ActionLink("Edit", "Edit") </li>
+                    <li>@Html.ActionLink("Delete", "Delete")</li>}
+                </ul>
+         </td>*@ 
+       </tr>
+}
+
+</table>

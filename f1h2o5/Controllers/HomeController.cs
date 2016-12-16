@@ -26,5 +26,13 @@ namespace f1h2o5.Controllers
 
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Reports()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

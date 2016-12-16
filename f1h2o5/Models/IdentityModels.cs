@@ -29,5 +29,19 @@ namespace f1h2o5.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.Country> Countries { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.Driver> Drivers { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.Team> Teams { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.DriverRunsRace> DriverRunsRaces { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.Race> Races { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.RaceResultType> RaceResultTypes { get; set; }
+
+        public System.Data.Entity.DbSet<f1h2o5.Models.Location> Locations { get; set; }
     }
 }

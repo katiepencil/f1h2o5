@@ -1,0 +1,26 @@
+﻿@model f1h2o5.Models.RaceResultType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RaceResultType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultTypeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResultTypeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

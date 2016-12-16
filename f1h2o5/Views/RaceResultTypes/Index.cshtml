@@ -1,0 +1,33 @@
+﻿@model IEnumerable<f1h2o5.Models.RaceResultType>
+
+@{
+    ViewBag.Title = "Types of race results";
+}
+
+<h2>These are the types of race results...</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ResultTypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResultTypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResultTypeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResultTypeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResultTypeId })
+        </td>
+    </tr>
+}
+
+</table>

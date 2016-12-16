@@ -58,11 +58,11 @@ namespace f1h2o5
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "513162868036-805ce0bhohegju72ik50r6m456c5blfd.apps.googleusercontent.com",
+                ClientSecret = "edX0ybH0s_quQbpGxH6l9I2d"
+            });
         }
     }
 }

@@ -1,0 +1,50 @@
+﻿@model f1h2o5.Models.DriverRunsRace
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DriverRunsRace</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Driver.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Driver.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race.RaceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race.RaceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RaceResultType.ResultTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RaceResultType.ResultTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RaceTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RaceTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
