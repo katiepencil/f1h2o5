@@ -16,49 +16,27 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Country.CountryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Team.Name)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LastName)
         </th>
-@if (@User.IsInRole("Admin"))
-{
+        <th>
+            @Html.DisplayNameFor(model => model.Country.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team.Name)
+        </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Address1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.State_Province)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PostalCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
-}
+        @if (@User.IsInRole("Admin"))
+        {
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+        }
         <th>
             @Html.DisplayNameFor(model => model.ImageUrl)
         </th>
-       
         <th></th>
     </tr>
 
@@ -80,30 +58,8 @@
 
         @if (@User.IsInRole("Admin"))
         {
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Address1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State_Province)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DOB)
             </td>
         }
         

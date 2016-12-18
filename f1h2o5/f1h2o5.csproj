@@ -303,6 +303,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\driverImages\27-AlHameli.jpg" />
+    <Content Include="Content\driverImages\9-AlRubayan.jpg" />
+    <Content Include="Content\driverImages\Carella.jpg" />
+    <Content Include="Content\driverImages\Torrente.jpg" />
     <Content Include="Content\images\160303dubaiUBE222.jpg" />
     <Content Include="Content\images\27-AlHameli.jpg" />
     <Content Include="Content\driverImages\Al-Qamzi.jpg" />

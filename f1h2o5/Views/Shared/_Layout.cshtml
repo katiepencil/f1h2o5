@@ -15,10 +15,10 @@
 
             <div class="navbar-header">
                 @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>*@
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>*@
                 @Html.ActionLink("Start your Engines!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
 
@@ -29,17 +29,17 @@
 
                     @if (@User.IsInRole("Member") || @User.IsInRole("Admin"))
                     {
-                    <li>@Html.ActionLink("Teams", "Index", "Teams")</li>
-                    <li>@Html.ActionLink("Races", "Index", "Races")</li>
-                    <li>@Html.ActionLink("Drivers", "Index", "Drivers")</li>
+                        <li>@Html.ActionLink("Teams", "Index", "Teams")</li>
+                        <li>@Html.ActionLink("Races", "Index", "Races")</li>
+                            <li>@Html.ActionLink("Drivers", "Index", "Drivers")</li>
                     }
 
                     @if (@User.IsInRole("Admin"))
                     {
-                    <li>@Html.ActionLink("Countries", "Index", "Countries")</li>
-                    <li>@Html.ActionLink("Locations", "Index", "Locations")</li>
-                    <li>@Html.ActionLink("Race Result Types", "Index", "RaceResultTypes")</li>
-                    <li>@Html.ActionLink("REPORTS", "Reports", "Home")</li>
+                        <li>@Html.ActionLink("Countries", "Index", "Countries")</li>
+                        <li>@Html.ActionLink("Locations", "Index", "Locations")</li>
+                            <li>@Html.ActionLink("Race Result Types", "Index", "RaceResultTypes")</li>
+                            <li>@Html.ActionLink("REPORTS", "Reports", "Home")</li>
                     }
 
                 </ul>
@@ -50,15 +50,17 @@
     </div>
 
     <div class="container body-content">
-        <br/><br />
-        @RenderBody()
+        <br/><br/>
+                @RenderBody()
         <hr />
     </div>
     <div class="footer">
         <img src="~/Content/images/logo-f1h2o-retina.png" width="250" />
         <p>
             &copy; @DateTime.Now.Year Michael Productions Inc, Cocoa Beach FL
-            |    <a href="http://f1h2o.net">F1H20 home</a>
+            |    <a href="http://f1h2o.net">F1H20 home  </a>
+@if (@User.IsInRole("Admin"))
+{ <a href="http://f1h2oarchives.com/">|   F1H2O archives  </a>}
             |    @Html.ActionLink("Home", "Index", "Home")
             |    @Html.ActionLink("About", "About", "Home")
             |    @Html.ActionLink("Contact", "Contact", "Home")
@@ -70,5 +72,9 @@
     @RenderSection("scripts", required: false)
 
 </body>
+
+
+
+
 
 </html>

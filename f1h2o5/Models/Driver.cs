@@ -64,7 +64,7 @@ namespace f1h2o5.Models
         [StringLength(128)]
         public string ImageUrl { get; set; }
 
-        [StringLength(500)]
+        [StringLength(800)]
         public string Bio { get; set; }
 
         [DisplayName("Team ID#")]
