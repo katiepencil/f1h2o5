@@ -1,4 +1,5 @@
-﻿using System;
+﻿using f1h2o5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,26 +16,23 @@ namespace f1h2o5.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        [Authorize(Roles = "Admin")]
-        public ActionResult Reports()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
         // PUT THE LINQ QUERY HERE for steve's reports.
+        // I have not figured out how to use a LINQ query. !!!
+        [Authorize(Roles = "Admin")]
+        public ActionResult Reports()
+        {
+            //var result = from d in [dbo].f1h2o_db.FirstName
+            //             select d.StartsWith("P");
+            //return View(result);
+            return View();
+        }
     }
 }

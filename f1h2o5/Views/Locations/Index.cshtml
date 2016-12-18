@@ -1,39 +1,66 @@
 ﻿@model IEnumerable<f1h2o5.Models.Location>
 
+@*I made 'Create', 'Edit', and 'Delete' links only available to Admin roles.*@
+
 @{
     ViewBag.Title = "Locations";
 }
 
 <h2>Here are the locations...</h2>
-
+@if (@User.IsInRole("Admin"))
+{
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Country.CountryName)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country.CountryName)
+        </th>
+@if (@User.IsInRole("Admin"))
+{
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+}
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Country.CountryName)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LocationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LocationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LocationId })
+            @Html.DisplayFor(modelItem => item.Country.CountryName)
         </td>
-    </tr>
+@if (@User.IsInRole("Admin"))
+{
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+}
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.LocationId })
+        @if (@User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("  |   Edit", "Edit", new { id = item.LocationId })
+
+            @Html.ActionLink("  |   Delete", "Delete", new { id = item.LocationId })}
+    </td>
+</tr>
 }
 
 </table>

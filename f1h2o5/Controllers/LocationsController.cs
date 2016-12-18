@@ -15,7 +15,6 @@ namespace f1h2o5.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Locations
-        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var locations = db.Locations.Include(l => l.Country);
@@ -23,7 +22,6 @@ namespace f1h2o5.Controllers
         }
 
         // GET: Locations/Details/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)

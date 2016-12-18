@@ -25,6 +25,10 @@ namespace f1h2o5.Models
 
         public virtual Country Country { get; set; }
 
+        public double Latitude { get; set; }
+
+        public double Longitude { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Race> Races { get; set; }
     }

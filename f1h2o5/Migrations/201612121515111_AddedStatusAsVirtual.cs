@@ -15,7 +15,7 @@ namespace f1h2o5.Migrations
             //            CountryName = c.String(nullable: false, maxLength: 128),
             //        })
             //    .PrimaryKey(t => t.CountryId);
-            
+
             //CreateTable(
             //    "dbo.Driver",
             //    c => new
@@ -41,7 +41,7 @@ namespace f1h2o5.Migrations
             //    .ForeignKey("dbo.Team", t => t.TeamId, cascadeDelete: true)
             //    .Index(t => t.CountryId)
             //    .Index(t => t.TeamId);
-            
+
             //CreateTable(
             //    "dbo.DriverRunsRace",
             //    c => new
@@ -58,7 +58,7 @@ namespace f1h2o5.Migrations
             //    .Index(t => t.DriverId)
             //    .Index(t => t.RaceId)
             //    .Index(t => t.ResultTypeId);
-            
+
             //CreateTable(
             //    "dbo.Race",
             //    c => new
@@ -73,19 +73,19 @@ namespace f1h2o5.Migrations
             //    .PrimaryKey(t => t.RaceId)
             //    .ForeignKey("dbo.Location", t => t.LocationId, cascadeDelete: true)
             //    .Index(t => t.LocationId);
-            
+
             //CreateTable(
             //    "dbo.Location",
             //    c => new
-            //        {
-            //            LocationId = c.Int(nullable: false, identity: true),
-            //            City = c.String(nullable: false, maxLength: 128),
-            //            CountryId = c.Int(nullable: false),
-            //        })
+            //    {
+            //        LocationId = c.Int(nullable: false, identity: true),
+            //        City = c.String(nullable: false, maxLength: 128),
+            //        CountryId = c.Int(nullable: false),
+            //    })
             //    .PrimaryKey(t => t.LocationId)
             //    .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
             //    .Index(t => t.CountryId);
-            
+
             //CreateTable(
             //    "dbo.RaceResultType",
             //    c => new
@@ -94,7 +94,7 @@ namespace f1h2o5.Migrations
             //            ResultTypeName = c.String(nullable: false, maxLength: 128),
             //        })
             //    .PrimaryKey(t => t.ResultTypeId);
-            
+
             //CreateTable(
             //    "dbo.Team",
             //    c => new
@@ -110,7 +110,7 @@ namespace f1h2o5.Migrations
             //    .PrimaryKey(t => t.TeamId)
             //    .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
             //    .Index(t => t.CountryId);
-            
+
         }
         
         public override void Down()
