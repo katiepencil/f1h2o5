@@ -50,7 +50,7 @@ namespace f1h2o5.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LocationId,City,CountryId")] Location location)
+        public ActionResult Create([Bind(Include = "LocationId,City,CountryId,Latitude,Longitude")] Location location)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace f1h2o5.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LocationId,City,CountryId")] Location location)
+        public ActionResult Edit([Bind(Include = "LocationId,City,CountryId,Latitude,Longitude")] Location location)
         {
             if (ModelState.IsValid)
             {

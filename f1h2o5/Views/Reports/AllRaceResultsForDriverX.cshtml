@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "All Race Results For Driver X";
+}
+
+<h2>All Race Results For Driver X</h2>
+
+<h3> </h3>
+
+<table>
+    @foreach (var result in Model)
+    {
+        <tr>
+            <td>@result</td>
+           
+        </tr>
+    }
+</table>

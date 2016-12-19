@@ -408,7 +408,9 @@
     <Content Include="Views\Teams\Edit.cshtml" />
     <Content Include="Views\Teams\Index.cshtml" />
     <Content Include="Views\Reports\Index.cshtml" />
-    <Content Include="Views\Reports\DriversWithYearsRaced.cshtml" />
+    <Content Include="Views\Reports\AllDriversForYearX.cshtml" />
+    <Content Include="Views\Reports\AllRaceResultsForDriverX.cshtml" />
+    <Content Include="Views\Reports\AllTeamsForYearX.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612121430150_InitialCreate.resx">

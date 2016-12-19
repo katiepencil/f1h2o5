@@ -24,15 +24,5 @@ namespace f1h2o5.Controllers
             return View();
         }
 
-        // PUT THE LINQ QUERY HERE for steve's reports.
-        // I have not figured out how to use a LINQ query. !!!
-        [Authorize(Roles = "Admin")]
-        public ActionResult Reports()
-        {
-            //var result = from d in [dbo].f1h2o_db.FirstName
-            //             select d.StartsWith("P");
-            //return View(result);
-            return View();
-        }
     }
 }
