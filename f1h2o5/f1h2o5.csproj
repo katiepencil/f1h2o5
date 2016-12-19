@@ -411,6 +411,7 @@
     <Content Include="Views\Reports\AllDriversForYearX.cshtml" />
     <Content Include="Views\Reports\AllRaceResultsForDriverX.cshtml" />
     <Content Include="Views\Reports\AllTeamsForYearX.cshtml" />
+    <Content Include="Views\Reports\FirstNamesOfDrivers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612121430150_InitialCreate.resx">
